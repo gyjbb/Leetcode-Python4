@@ -7,16 +7,33 @@ The challenges today are about
 
 ## 24. Swap Nodes in Pairs
 [Reading link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.md)\
-<img src="https://github.com/gyjbb/Leetcode-Python4/blob/main/Screen%20Shot%202023-05-17%20at%202.58.58%20PM.png" width="700" height="300">
+<img src="https://github.com/gyjbb/Leetcode-Python4/blob/main/Screen%20Shot%202023-05-17%20at%202.58.58%20PM.png" width="400" height="300">
+
+
+
 
 ```python
-# Here is a code block 
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dummy_head = ListNode(next=head)
+        current = dummy_head
 
+        # 必须有cur的下一个和下下个才能交换，否则说明已经交换结束了
+        while current.next and current.next.next:
+            temp = current.next # 防止节点修改
+            temp1 = current.next.next.next
 
+            current.next = current.next.next
+            current.next.next = temp
+            temp.next = temp1
+            current = current.next.next
+        return dummy_head.next
 ```
-
-
-
 
 
 ## 19. Remove Nth Node From End of List
