@@ -77,4 +77,11 @@ class Solution:
 ```
 
 ## Interview question: two connected linked lists
+[Reading link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4.md)\
+<img src="https://github.com/gyjbb/Leetcode-Python4/blob/main/Screen%20Shot%202023-05-17%20at%205.17.48%20PM.png" width="400" height="150">
+
+
+
+
+
 
