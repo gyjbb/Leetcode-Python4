@@ -50,8 +50,8 @@ class Solution:
 ## 19. Remove Nth Node From End of List
 [Leetcode Link](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)\
 [Reading Link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0019.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9.md)\
-For **deleting** the node in a linked list, the current pointer need to be at the node before the node that needs to be deleted. Then use the cur.next = cur.next.next to delete.\
-Use **two pinters** here, a fast one and a slow one. The fast pointer will move (n+1) steps first. Then two pointers move together until the fast one points to null.
+For **deleting** the node in a linked list, the current pointer needs to be at the node before the node that needs to be deleted. Then use the cur.next = cur.next.next to delete.\
+Use **two pointers** here, a fast one and a slow one. The fast pointer will move (n+1) steps first. Then two pointers move together until the fast one points to null.
 
 ```python
 # Definition for singly-linked list.
@@ -118,11 +118,11 @@ class Solution:
 
 ## 142. Linked List Cycle II
 [Leetcode link](https://leetcode.com/problems/linked-list-cycle-ii/)\
-[Video link](https://www.bilibili.com/video/BV1if4y1d7ob/?spm_id_from=333.788&vd_source=63f26efad0d35bcbb0de794512ac21f3)\
+[Video link](https://www.bilibili.com/video/BV1if4y1d7ob/?spm_id_from=333.788&vd_source=63f26efad0d35bcbb0de794512ac21f3)
 1. How to judge if a linked list has a loop?\
 Here we can also use **two pointers**. A fast one and a slow one. The fast pointer moves 2 steps every time, and the slow one moves 1 step every time. If the linked list has a loop, the fast and slow pointers will meet in the loop.\
 2. How to find the start of the loop?\
-[Reading link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.md)\
+[Reading link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.md)
 ```python
 # Definition for singly-linked list.
 # class ListNode:
