@@ -80,7 +80,40 @@ class Solution:
 [Reading link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4.md)\
 <img src="https://github.com/gyjbb/Leetcode-Python4/blob/main/Screen%20Shot%202023-05-17%20at%205.17.48%20PM.png" width="400" height="150">
 
-
+```python
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+        lenA = self.getLength(headA)
+        lenB = self.getLength(headB)
+        
+        # 通过移动较长的链表，使两链表长度相等
+        if lenA > lenB:
+            headA = self.moveForward(headA, lenA - lenB)
+        else:
+            headB = self.moveForward(headB, lenB - lenA)
+        
+        # 将两个头向前移动，直到它们相交
+        while headA and headB:
+            if headA == headB:
+                return headA
+            headA = headA.next
+            headB = headB.next
+        
+        return None
+    
+    def getLength(self, head: ListNode) -> int:
+        length = 0
+        while head:
+            length += 1
+            head = head.next
+        return length
+    
+    def moveForward(self, head: ListNode, steps: int) -> ListNode:
+        while steps > 0:
+            head = head.next
+            steps -= 1
+        return head
+```
 
 
 
