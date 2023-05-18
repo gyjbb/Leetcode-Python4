@@ -1,5 +1,6 @@
 # Leetcode-Python4
-## 24. Swap Nodes in Pairs, 19. Remove Nth Node From End of List, 142
+## 24. Swap Nodes in Pairs, 19. Remove Nth Node From End of List, Two connected linked lists, 142. Linked List Cycle II
+
 May 15, 2023  4h
 
 The fourth day for Linked List. Today we will learn more about the linked list.\
@@ -10,7 +11,7 @@ The challenges today are about
 <img src="https://github.com/gyjbb/Leetcode-Python4/blob/main/Screen%20Shot%202023-05-17%20at%202.58.58%20PM.png" width="400" height="180">
 
 > cur = dummy_head\
-> step 1-2: since the current pointer will change, we need to save the linked list original order and the nodes. So the linked list will not break:\
+> step 1-2: since the current pointer will change, we need to save original order and the nodes of the linked list using **temp pointer**. So the linked list will not break:\
 > temp = cur.next\
 > temp1 = cur.next.next.next\
 > step 1 in the picture above:\
@@ -115,6 +116,39 @@ class Solution:
         return head
 ```
 
+## 142. Linked List Cycle II
+[Leetcode link](https://leetcode.com/problems/linked-list-cycle-ii/)\
+[Video link](https://www.bilibili.com/video/BV1if4y1d7ob/?spm_id_from=333.788&vd_source=63f26efad0d35bcbb0de794512ac21f3)\
+1. How to judge if a linked list has a loop?\
+Here we can also use **two pointers**. A fast one and a slow one. The fast pointer moves 2 steps every time, and the slow one moves 1 step every time. If the linked list has a loop, the fast and slow pointers will meet in the loop.\
+2. How to find the start of the loop?\
+[Reading link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.md)\
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+class Solution:
+    def detectCycle(self, head: ListNode) -> ListNode:
+        slow = head
+        fast = head
+        
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            
+            # If there is a cycle, the slow and fast pointers will eventually meet.
+            if slow == fast:
+                # Move one of the pointers back to the start of the list
+                slow = head
+                while slow != fast:
+                    slow = slow.next
+                    fast = fast.next
+                return slow
+        # If there is no cycle, return None
+        return None
+```
 
 
 
