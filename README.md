@@ -120,8 +120,8 @@ class Solution:
 [Leetcode link](https://leetcode.com/problems/linked-list-cycle-ii/)\
 [Video link](https://www.bilibili.com/video/BV1if4y1d7ob/?spm_id_from=333.788&vd_source=63f26efad0d35bcbb0de794512ac21f3)
 1. How to judge if a linked list has a loop?\
-Here we can also use **two pointers**. A fast one and a slow one. The fast pointer moves 2 steps every time, and the slow one moves 1 step every time. If the linked list has a loop, the fast and slow pointers will meet in the loop.\
-2. How to find the start of the loop?
+Here we can also use **two pointers**. A fast one and a slow one. The fast pointer moves 2 steps every time, and the slow one moves 1 step every time. If the linked list has a loop, the fast and slow pointers will meet in the loop.
+2. How to find the start of the loop?\
 [Reading link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.md)
 ```python
 # Definition for singly-linked list.
