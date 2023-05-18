@@ -152,11 +152,11 @@ class Solution:
 
 ## Linked List conclusion
 1.[linked list theory](https://programmercarl.com/%E9%93%BE%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html)\
-2. dummy head
-3. add and delete nodes in linked list
-4. reverse a linked list
-5. remove nth node from the end of linked list
-6. two connected linked lists
+2. dummy head\
+3. add and delete nodes in linked list\
+4. reverse a linked list\
+5. remove nth node from the end of linked list\
+6. two connected linked lists\
 7. linked list cycle.
 
 
